@@ -1,0 +1,336 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@500;600;700&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  margin: 0;
+  font-family: "Spartan", sans-serif;
+}
+
+@media screen and (max-width: 375px) {
+  body {
+    height: 100%;
+    width: 100%;
+    overflow: scroll;
+  }
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 2rem 0 0 4rem;
+  z-index: 33;
+  color: white;
+}
+
+@media screen and (max-width: 375px) {
+  header {
+    padding: 0;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+header .hamburger {
+  display: none;
+}
+
+@media screen and (max-width: 375px) {
+  header .hamburger {
+    display: inline-block;
+    position: absolute;
+    left: 25px;
+    width: 1.8rem;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  header .logo {
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  header nav {
+    justify-content: flex-end;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background: white;
+    height: 5rem;
+    display: none;
+  }
+}
+
+header nav ul {
+  list-style-type: none;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+@media screen and (max-width: 375px) {
+  header nav ul {
+    width: 80%;
+    align-items: center;
+    padding: 1rem 0;
+  }
+}
+
+header nav ul li {
+  padding: 0 20px;
+}
+
+@media screen and (max-width: 375px) {
+  header nav ul li {
+    padding: 0 5px;
+  }
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: white;
+  padding-bottom: 5px;
+  width: 5px;
+}
+
+@media screen and (max-width: 375px) {
+  header nav ul li a {
+    color: black;
+  }
+}
+
+header nav ul li a:hover {
+  border-bottom: 2px solid white;
+}
+
+header .show-hamb {
+  display: flex;
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  height: 65vh;
+}
+
+@media screen and (max-width: 375px) {
+  .slider {
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    width: 100%;
+  }
+}
+
+.slider .img-container {
+  width: 55%;
+  height: 65vh;
+}
+
+@media screen and (max-width: 375px) {
+  .slider .img-container {
+    width: 100%;
+    height: 33vh;
+  }
+}
+
+.slider .img-container img {
+  width: 100%;
+  height: 65vh;
+}
+
+@media screen and (max-width: 375px) {
+  .slider .img-container img {
+    height: 40vh;
+  }
+}
+
+.slider .text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 44%;
+  height: 65vh;
+  padding: 0 9rem;
+  position: relative;
+}
+
+@media screen and (max-width: 375px) {
+  .slider .text-container {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    position: relative;
+  }
+}
+
+.slider .text-container h1 {
+  font-size: 2.6rem;
+  color: black;
+  font-weight: 700;
+  width: 90%;
+}
+
+@media screen and (max-width: 375px) {
+  .slider .text-container h1 {
+    width: 80%;
+    font-size: 1.5rem;
+    text-align: left;
+    padding-top: 1rem;
+  }
+}
+
+.slider .text-container p {
+  color: #a1a1a1;
+  width: 90%;
+}
+
+@media screen and (max-width: 375px) {
+  .slider .text-container p {
+    width: 80%;
+    font-size: 1rem;
+  }
+}
+
+.slider .text-container h4 {
+  color: #454545;
+  letter-spacing: 7px;
+}
+
+.slider .text-container .shop-now {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.slider .text-container .shop-now img {
+  margin-left: 25px;
+}
+
+.slider .text-container .shop-now:hover h4,
+.slider .text-container .shop-now:active h4 {
+  outline: none;
+  color: #a1a1a1;
+}
+
+.slider .text-container .arrow-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 11rem;
+  height: 4.5rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+@media screen and (max-width: 375px) {
+  .slider .text-container .arrow-btn {
+    position: absolute;
+    top: -1.6rem;
+    left: 53%;
+  }
+}
+
+.slider .text-container .arrow-btn div {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 100%;
+  background: black;
+  cursor: pointer;
+}
+
+.slider .text-container .arrow-btn div:hover {
+  background-color: #a1a1a1;
+}
+
+.about {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  margin: 0;
+  height: 35vh;
+}
+
+@media screen and (max-width: 375px) {
+  .about {
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+}
+
+.about div {
+  height: 100%;
+}
+
+@media screen and (max-width: 375px) {
+  .about div {
+    width: 100%;
+  }
+}
+
+.about div img {
+  height: 100%;
+}
+
+@media screen and (max-width: 375px) {
+  .about div img {
+    width: 100%;
+  }
+}
+
+.about__text {
+  padding: 3rem;
+}
+
+.about__text h2 {
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 5px;
+}
+
+@media screen and (max-width: 375px) {
+  .about__text h2 {
+    font-size: 1.2rem;
+  }
+}
+
+.about__text P {
+  color: #a1a1a1;
+}
+
+@media screen and (max-width: 375px) {
+  .about__text P {
+    font-size: 1rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */
